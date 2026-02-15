@@ -1,10 +1,23 @@
 # 工作流名称，在GitHub Actions页面显示
-name: 自动打包前端项目
+name: 自动打包并部署到 GitHub Pages
 
 # 触发条件：推送到main分支时执行
 on:
   push:
     branches: [ main ]
+  # 允许手动触发
+  workflow_dispatch:
+
+# 设置 GITHUB_TOKEN 的权限，允许写入 Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 只允许一个并发部署
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 # 定义要执行的任务
 jobs:
@@ -35,16 +48,29 @@ jobs:
           chmod +x ./node_modules/.bin/vitepress
           npm run cwx:build
 
-      # 可选步骤5：上传打包产物
-      - name: 上传打包产物
-        uses: actions/upload-artifact@v4
-        with:
-          name: dist-files
-          path: ./dist
+      # 步骤5：列出目录结构，确认dist位置（调试用，可选）
+      - name: 查看目录结构
+        run: ls -la ./
 
-      # 步骤6：部署到 GitHub Pages
-      - name: 部署到 GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      # 步骤6：设置 Pages 环境
+      - name: 设置 Pages
+        uses: actions/configure-pages@v5
+
+      # 步骤7：上传构建产物
+      - name: 上传构建产物
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          # 这里的路径是关键！如果你的dist在子目录，需要调整，比如 './docs/.vitepress/dist'
+          path: ./docs/.vitepress/dist
+
+  # 部署任务
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: 部署到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
