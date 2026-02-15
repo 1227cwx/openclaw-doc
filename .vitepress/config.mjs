@@ -26,7 +26,13 @@ export default defineConfig({
           { text: 'Mac Homebrew', link: '/openclaw_mac_homebrew' },
           { text: '接入本地大模型', link: '/openclaw_ollama' },
           { text: '中转 API 配置', link: '/openclaw_api_proxy' },
-          { text: '插件与扩展', link: '/openclaw_plugins' }
+          { text: '插件与扩展', link: '/openclaw_plugins' }, 
+        ]
+      },
+       {
+        text: '实用技巧',
+        items: [
+          { text: '打通语音识别', link: '/openclaw_voice' }
         ]
       },
       {
