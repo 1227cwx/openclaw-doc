@@ -9,7 +9,7 @@ hero:
   
   actions:
     - theme: brand
-      text: 阅读文档
+      text: 开 始
       link: /openclaw_installation
   #  - theme: alt
     #  text: API Examples
