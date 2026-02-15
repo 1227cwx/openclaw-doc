@@ -14,6 +14,15 @@ OpenClaw 支持通过 Whisper 和 FFmpeg 实现语音转文字功能，让你可
 
 只要你的模型不是太蠢，大多数情况下它会明白你的意思，然后自动下载安装 Whisper 和 FFmpeg，并开始进行语音识别。
 
+## Skills 安装
+
+如果上述方法无法实现语音识别，可以直接安装 Skills 进行语音识别。此 Skills 原理与上述方法相同。
+
+<div class="command-box">
+安装命令：
+<div class="command-text">clawhub install openai-whisper</div>
+</div>
+
 ## 示例
 
 <div class="image-gallery">
@@ -74,6 +83,26 @@ OpenClaw 会自动处理这两个工具的安装和配置，你只需要按照�
   border: 1px solid var(--vp-c-brand);
   margin: 1.5rem 0;
   font-weight: 500;
+}
+
+.command-box {
+  padding: 1.5rem;
+  background: var(--vp-c-bg-soft);
+  border-radius: 10px;
+  border: 1px solid var(--vp-c-border);
+  margin: 1.5rem 0;
+}
+
+.command-text {
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 1.1em;
+  color: var(--vp-c-brand);
+  background: var(--vp-c-bg);
+  padding: 0.8rem 1.2rem;
+  border-radius: 6px;
+  border-left: 4px solid var(--vp-c-brand);
+  margin-top: 0.8rem;
+  word-break: break-all;
 }
 
 .image-gallery {
