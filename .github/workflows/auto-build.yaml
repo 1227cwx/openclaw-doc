@@ -22,27 +22,29 @@ jobs:
       - name: 安装Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '24'  # 适配你的Node.js 24.13.0版本
+          node-version: '24'
           cache: 'npm' # 缓存npm依赖，加速下次构建
 
       # 步骤3：安装项目依赖
       - name: 安装依赖
         run: npm install
 
-      # 步骤4：执行打包命令（你修改后的自定义打包命令）
+      # 步骤4：先赋予vitepress执行权限，再执行你的打包命令
       - name: 执行打包
-        run: npm run cwx:build --scripts-prepend-node-path
+        run: |
+          chmod +x ./node_modules/.bin/vitepress
+          npm run cwx:build
 
-      # 可选步骤5：上传打包产物（dist文件夹），方便下载
+      # 可选步骤5：上传打包产物
       - name: 上传打包产物
         uses: actions/upload-artifact@v4
         with:
-          name: dist-files # 产物名称，自定义
-          path: ./dist     # 打包产物的目录（前端项目通常是dist）
+          name: dist-files
+          path: ./dist
 
-      # 步骤6：部署到 GitHub Pages（修正缩进后的关键步骤）
+      # 步骤6：部署到 GitHub Pages
       - name: 部署到 GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }} # GitHub自动提供，无需手动配置
-          publish_dir: ./dist # 打包产物目录，和你的dist对应
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
