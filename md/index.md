@@ -17,7 +17,7 @@ hero:
 
 features:
   - icon: 🖥️
-    title: 运行在你的设备上
+    title: 在你的设备上运行
     details: Mac、Windows 或 Linux。Anthropic、OpenAI 或本地模型。默认私有——你的数据属于你自己。
   - icon: 💬
     title: 任意聊天应用
