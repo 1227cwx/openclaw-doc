@@ -48,20 +48,24 @@ jobs:
           chmod +x ./node_modules/.bin/vitepress
           npm run cwx:build
 
-      # 步骤5：列出目录结构，确认dist位置（调试用，可选）
-      - name: 查看目录结构
-        run: ls -la ./
+      # 步骤5：列出整个项目的目录结构，找到dist文件夹（关键调试步骤）
+      - name: 查找dist文件夹位置
+        run: |
+          echo "=== 查看根目录结构 ==="
+          ls -la ./
+          echo "=== 查找所有dist文件夹 ==="
+          find . -name "dist" -type d
 
       # 步骤6：设置 Pages 环境
       - name: 设置 Pages
         uses: actions/configure-pages@v5
 
-      # 步骤7：上传构建产物
+      # 步骤7：上传构建产物（先使用根目录下的dist，如果不对，根据上一步的日志修改path）
       - name: 上传构建产物
         uses: actions/upload-pages-artifact@v3
         with:
-          # 这里的路径是关键！如果你的dist在子目录，需要调整，比如 './docs/.vitepress/dist'
-          path: ./docs/.vitepress/dist
+          # 先尝试根目录下的dist，如果不对，根据上一步的find结果修改
+          path: ./dist
 
   # 部署任务
   deploy:
