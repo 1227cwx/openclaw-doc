@@ -1,4 +1,4 @@
-# 打通语音识别
+# 打通语音识别【免费】
 <br/>
 <div class="voice-intro">
 OpenClaw 支持通过 Whisper 和 FFmpeg 实现语音转文字功能，让你可以通过语音与 AI 进行交互。

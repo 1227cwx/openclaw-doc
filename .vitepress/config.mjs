@@ -32,7 +32,7 @@ export default defineConfig({
        {
         text: '实用技巧',
         items: [
-          { text: '打通语音识别', link: '/openclaw_voice' }
+          { text: '打通语音识别【免费】', link: '/openclaw_voice' }
         ]
       },
       {
