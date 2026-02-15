@@ -1,0 +1,31 @@
+/**
+ * Custom styles for the VitePress theme.
+ */
+
+/* Center the hero section on the home page */
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+}
+
+.VPHero .container {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.VPHero .name,
+.VPHero .text,
+.VPHero .tagline {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.VPHero .actions {
+  justify-content: center;
+}
+
+.VPHero .image {
+  /* If an image is added later, ensure it centers */
+  order: 1; /* In some layouts image is first */
+  margin: 0 auto; 
+}
