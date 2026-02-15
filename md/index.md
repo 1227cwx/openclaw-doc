@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "OpenClaw使用文档"
   text: ""
-  tagline: 一个完全开源免费的私人 AI 助手<br>个人整理文档，仅供参考
+  tagline: 一个完全开源免费的私人AI助手<br>个人整理文档，仅供参考
   
   actions:
     - theme: brand
