@@ -31,7 +31,7 @@ jobs:
 
       # 步骤4：执行打包命令（你修改后的自定义打包命令）
       - name: 执行打包
-        run: npm run cwx:build
+        run: npm run cwx:build --scripts-prepend-node-path
 
       # 可选步骤5：上传打包产物（dist文件夹），方便下载
       - name: 上传打包产物
