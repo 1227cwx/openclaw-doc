@@ -1,0 +1,41 @@
+# 工作流名称，在GitHub Actions页面显示
+name: 自动打包前端项目
+
+# 触发条件：推送到main分支时执行
+on:
+  push:
+    branches: [ main ]
+
+# 定义要执行的任务
+jobs:
+  build:
+    # 运行环境：GitHub提供的Ubuntu服务器
+    runs-on: ubuntu-latest
+
+    # 具体步骤
+    steps:
+      # 步骤1：拉取GitHub仓库的代码到运行环境
+      - name: 拉取代码
+        uses: actions/checkout@v4
+
+      # 步骤2：安装Node.js（适配你的24.13.0版本）
+      - name: 安装Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'  # 关键修改：从18改为24，适配你的版本
+          cache: 'npm' # 缓存npm依赖，加速下次构建
+
+      # 步骤3：安装项目依赖
+      - name: 安装依赖
+        run: npm install
+
+      # 步骤4：执行打包命令
+      - name: 执行打包
+        run: npm run cwx:build
+
+      # 可选步骤5：上传打包产物（dist文件夹），方便下载
+      - name: 上传打包产物
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-files # 产物名称，自定义
+          path: ./dist     # 打包产物的目录（前端项目通常是dist）
