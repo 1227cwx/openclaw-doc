@@ -19,60 +19,6 @@ rmdir /s /q qqbot
 git clone https://github.com/sliverp/qqbot.git && openclaw plugins install ./qqbot
 ```
 
-## Skills 技能包
-
-### 平台一：clawhub.ai
-
-访问 [clawhub.ai](https://clawhub.ai) 获取更多技能。
-
-**安装命令：**
-
-优先使用命令 1，如果无法使用则尝试命令 2。
-
-**命令 1：**
-
-```bash
-clawhub install [技能包名]
-# 示例
-clawhub install openbroker
-```
-
-**命令 2：**
-
-```bash
-npx clawhub@latest install [技能包名]
-# 示例
-npx clawhub@latest install openbroker
-```
-
-### 平台二：skills.sh
-
-访问 [skills.sh](https://skills.sh) 获取更多技能。
-
-CLI 可以直接使用 `npx` 运行，无需安装：
-
-```bash
-npx skills add <skill-name>
-```
-
-**基本用法：**
-
-通过指定所有者和技能名称来安装技能：
-
-```bash
-npx skills add vercel-labs/agent-skills
-```
-
-这将下载技能并将其配置以与您的 AI 代理一起使用。
-
-**推荐安装的 Skills：**
-
-*   `proactive-agent-t-1-2-4`：【主动代理】
-*   `find-skills`：【查找技能】
-*   `self-reflection`：【自我反思】
-*   `reflect-learn`：【自我提升】
-*   `baidu-search`：【百度搜索】
-
 ## Telegram 配对
 
 Telegram 配对命令示例：

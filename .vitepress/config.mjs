@@ -35,6 +35,14 @@ export default defineConfig({
           { text: '打通语音识别【免费】', link: '/openclaw_voice' }
         ]
       },
+       {
+        text: 'Skills推荐',
+        items: [
+          { text: 'Skills安装', link: '/openclaw_skills_install' },
+          { text: '联网搜索', link: '/openclaw_skills_search' },
+          { text: '自我学习', link: '/openclaw_skills_learning' }
+        ]
+      },
       {
         text: '高级部署',
         items: [
