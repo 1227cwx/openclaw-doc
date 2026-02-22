@@ -96,6 +96,14 @@ npm update -g openclaw
 npm uninstall -g openclaw
 ```
 
+### 日志查看
+
+实时查看日志：
+
+```bash
+openclaw logs --follow
+```
+
 ## 插件与扩展管理
 
 ### 添加扩展支持
