@@ -44,6 +44,12 @@ export default defineConfig({
         ]
       },
       {
+        text: '远程控制',
+        items: [
+          { text: '远程控制安卓手机', link: '/openclaw_remote_android' }
+        ]
+      },
+       {
         text: '高级部署',
         items: [
           { text: 'Linux 服务部署', link: '/openclaw_linux_deploy' }
