@@ -1,4 +1,4 @@
-# OpenClaw 常用命令
+# OpenClaw 常用配置/命令
 
 本文档汇总了 OpenClaw 的常用管理命令，方便随时查阅。
 
@@ -18,6 +18,12 @@ npm i -g openclaw
 
 ```bash
 npm update -g openclaw
+```
+
+预览更新（不实际执行）：
+
+```bash
+openclaw update --dry-run
 ```
 
 ### 卸载
@@ -146,4 +152,37 @@ openclaw tui
 
 ```bash
 openclaw gateway --verbose
+```
+
+## 流式输出配置
+
+OpenClaw 支持统一的流式输出配置，所有频道使用相同的配置方式。
+
+### 配置格式
+
+流式配置统一使用 `channels.<channel>.streaming` 格式：
+
+```yaml
+channels:
+  <channel>:
+    streaming: <value>
+```
+
+### 可选值
+
+- `off` - 关闭流式输出
+- `partial` - 部分流式输出
+- `block` - 块级流式输出
+- `progress` - 进度流式输出
+
+### 配置示例
+
+```yaml
+channels:
+  feishu:
+    streaming: progress
+  wechat:
+    streaming: partial
+  slack:
+    streaming: off
 ```

@@ -22,7 +22,7 @@ export default defineConfig({
         text: '快速入门',
         items: [
           { text: '环境安装与配置', link: '/openclaw_installation' },
-          { text: '常用命令手册', link: '/openclaw_commands' },
+          { text: '常用配置/命令', link: '/openclaw_commands' },
           { text: 'Mac Homebrew', link: '/openclaw_mac_homebrew' },
           { text: '接入本地大模型', link: '/openclaw_ollama' },
           { text: '中转 API 配置', link: '/openclaw_api_proxy' },
