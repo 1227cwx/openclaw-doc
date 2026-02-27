@@ -2,7 +2,7 @@
 
 ## 向量记忆库服务部署
 
-向量记忆库（AIVectorMemory）是一个支持多 agent 通过 tags 隔离记忆的 HTTP API 服务。
+向量记忆库（AIVectorMemory）跨会话持久化记忆 MCP Server。
 
 ### 安装步骤
 
@@ -17,8 +17,8 @@ pip install aivectormemory
 3. **在 root 目录中新建一个文件夹**（随便什么名字都行）
 
 ```bash
-mkdir -p /root/aivectormemory
-cd /root/aivectormemory
+mkdir -p /root/name
+cd /root/namen
 ```
 
 4. **上传脚本文件**
@@ -36,7 +36,7 @@ python3 start.py
 下载 <a href="/public/aivectormemory-api.tar.gz" download="aivectormemory-api.tar.gz">aivectormemory-api.tar.gz</a> 压缩包，然后安装：
 
 ```bash
-clawhub install aivectormemory-api.tar.gz
+解压到大龙虾的/root/.openclaw/workspace/skills目录中
 ```
 
 7. **配置大龙虾**
