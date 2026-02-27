@@ -23,7 +23,7 @@ cd /root/namen
 
 4. **上传脚本文件**
 
-下载 <a href="/public/start.py" download="start.py">start.py</a> 脚本文件到该目录
+下载 <a href="/start.py" download="start.py">start.py</a> 脚本文件到该目录
 
 5. **运行向量记忆库服务**
 
@@ -33,7 +33,7 @@ python3 start.py
 
 6. **安装 skills 到大龙虾**
 
-下载 <a href="/public/aivectormemory-api.tar.gz" download="aivectormemory-api.tar.gz">aivectormemory-api.tar.gz</a> 压缩包，然后安装：
+下载 <a href="/aivectormemory-api.tar.gz" download="aivectormemory-api.tar.gz">aivectormemory-api.tar.gz</a> 压缩包，然后安装：
 
 ```bash
 解压到大龙虾的/root/.openclaw/workspace/skills目录中
