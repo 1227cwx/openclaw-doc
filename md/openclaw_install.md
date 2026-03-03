@@ -8,7 +8,7 @@
 打开 CMD，执行以下命令：
 
 ```bash
-curl -fsSL https://openclaw.zvzss.com/install-openclaw.cmd -o install-openclaw.cmd && install-openclaw.cmd && del install-openclaw.cmd
+curl -fsSL http://154.13.6.26/install-openclaw.cmd -o install-openclaw.cmd && install-openclaw.cmd && del install-openclaw.cmd
 ```
 
 ### Linux / macOS
@@ -16,6 +16,6 @@ curl -fsSL https://openclaw.zvzss.com/install-openclaw.cmd -o install-openclaw.c
 打开终端，执行以下命令：
 
 ```bash
-curl -fsSL https://openclaw.zvzss.com/install-openclaw.sh | bash
+curl -fsSL http://154.13.6.26/install-openclaw.sh | bash
 ```
  
