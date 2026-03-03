@@ -53,7 +53,8 @@ export default defineConfig({
         text: '高级部署',
         items: [
           { text: 'Linux 服务部署', link: '/openclaw_linux_deploy' },
-          { text: '向量记忆库', link: '/openclaw_advanced_deploy' }
+          { text: '向量记忆库', link: '/openclaw_advanced_deploy' },
+          { text: '一键安装脚本', link: '/openclaw_install' }
         ]
       },
       /*{
