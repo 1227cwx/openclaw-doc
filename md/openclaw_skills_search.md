@@ -9,3 +9,15 @@
 ```bash
 clawhub install tavily-search
 ```
+
+## qingyu-all-search
+
+聚合万能 API 搜索（目前免费开放使用）。
+
+**下载地址：** [qingyu-all-search.zip](/qingyu-all-search.zip)
+
+**使用方法：**
+
+1. 下载 `qingyu-all-search.zip` 压缩包
+2. 上传到 `openclaw/workspace/skills` 目录
+3. 解压即可使用
