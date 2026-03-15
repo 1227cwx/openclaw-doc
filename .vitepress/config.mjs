@@ -40,7 +40,8 @@ export default defineConfig({
         items: [
           { text: 'Skills安装', link: '/openclaw_skills_install' },
           { text: '联网搜索', link: '/openclaw_skills_search' },
-          { text: '自我学习', link: '/openclaw_skills_learning' }
+          { text: '自我学习', link: '/openclaw_skills_learning' },
+          { text: '金融数据查询', link: '/openclaw_skills_finance' }
         ]
       },
       {
